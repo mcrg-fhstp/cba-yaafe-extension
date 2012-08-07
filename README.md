@@ -5,7 +5,8 @@ This is an extension for [YAAFE](http://yaafe.sourceforge.net) (Yet Another Audi
 
 ## Extensions
 
-This extension provides some new features as well as the possibility to get the output directly to the commandline for implementing it e.g. in PHP (<code>exec( 'yaafe_cba.py -r 11025 --resample -f "cfa: ContinuousFrequencyActivation" wavefile.wav', $output, $return_value);</code>).
+This extension provides some new features as well as the possibility to get the output directly to the commandline for implementing it e.g. in PHP (<code>$cmd = 'yaafe_cba.py -r 11025 --resample -f "cfa: ContinuousFrequencyActivation" wavefile.wav';
+exec( $cmd, $output, $return_value);</code>).
 
 ## Installation
 
