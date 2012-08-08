@@ -1,7 +1,7 @@
-_old
-_ignore
-build
+_old/
+_ignore/
+build/
 .DS_Store
-doc
+doc/
 CMakeCache.txt
-CMakeFiles
+CMakeFiles/
