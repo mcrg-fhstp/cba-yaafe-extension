@@ -3,7 +3,7 @@ CBA-YAAFE-extension
 
 This is an extension for [YAAFE](http://yaafe.sourceforge.net) (Yet Another Audio Feature Extractor), developed for music detection with the **Continuous Frequency Activation feature** (CFA) for the **Cultural Broadcasting Archive** ([CBA](http://cba.fro.at)).
 
-## Adaptation
+## Adaptations
 
 This extension provides the possibility to get the output directly to the commandline for implementing it e.g. in PHP:
 
@@ -17,7 +17,7 @@ This extension provides the possibility to get the output directly to the comman
 
 ## New Features
 
-see [here](./FEATURES.md)
+For a list of the new features and a description see: FEATURES.md.
 
 ## Installation
 
@@ -48,3 +48,7 @@ The CBA-extension for YAAFE is released under GNU-LGPL v3.
 ## Contact
 
 For questions, comments and complaints please use Issues on GitHub.
+
+Media Computing Research Group (<http://mc.fhstp.ac.at>)
+Institute for Creative Media Technologies (IC\M/T)
+University of Applied Sciences St. Pölten (<http://www.fhstp.ac.at>)
