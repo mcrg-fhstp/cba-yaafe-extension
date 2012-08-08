@@ -2,7 +2,7 @@
 #
 # Yaafe extension for the Cultural Broadcasting Archive.
 #
-# Copyright (c) 2012 University of Applied Sciences – Institute for Creative Media Technologies
+# Copyright (c) 2012 University of Applied Sciences - Institute for Creative Media Technologies
 #
 # Author : Ewald Wieser B.Sc. (fhstp.ac.at)
 #
@@ -29,11 +29,9 @@
 #
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
-
 '''
 Yaafe extension module for the Cultural Broadcasting Archive.
 '''
-
 from yaafelib.audiofeature import AudioFeature, check_dataflow_params, dataflow_safe_append
 from yaafelib.dataflow import DataFlow
 import yaafefeatures as yf
@@ -45,10 +43,10 @@ import decimal
 
 class ContinuousFrequencyActivation(AudioFeature):
     '''
-        Compute Continuous Frequency Activation ([SP2007]_).
+    Compute Continuous Frequency Activation ([SP2007]_).
         
-        .. [SP2007] Seyerlehner, Pohle, et al., *Automatic Music Detection in Television Productions.*, Proc. of the 10th Int. Conference on Digital Audio Effects (DAFx-07), Bordeaux, France, September 10-15, 2007, pp. 221-228.
-        '''
+    .. [SP2007] Seyerlehner, Pohle, et al., *Automatic Music Detection in Television Productions.*, Proc. of the 10th Int. Conference on Digital Audio Effects (DAFx-07), Bordeaux, France, September 10-15, 2007, pp. 221-228.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension','yaafe-components']
     PARAMS = [(yf.MagnitudeSpectrum,{}),
               ('WindowNormalize',{}),
@@ -83,8 +81,8 @@ class ContinuousFrequencyActivation(AudioFeature):
 
 class SimpleThresholdClassification(AudioFeature):
     '''
-        Feature transform that compares each value to the threshold and outputs 1 if greater than or equal and 0 if lower than threshold.
-        '''
+    Feature transform that compares each value to the threshold and outputs 1 if greater than or equal and 0 if lower than threshold.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('SimpleThresholdClassification',{})]
     TRANSFORM = True
@@ -97,8 +95,8 @@ class SimpleThresholdClassification(AudioFeature):
 
 class SimpleNoiseGate(AudioFeature):
     '''
-        Simple Noise Gate.
-        '''
+    Simple Noise Gate.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('SimpleNoiseGate',{}),]
     @classmethod
@@ -110,8 +108,8 @@ class SimpleNoiseGate(AudioFeature):
 
 class MedianFilter(AudioFeature):
     '''
-        Median Filter.
-        '''
+    Median Filter.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('MedianFilter',{}),]
     @classmethod
@@ -123,8 +121,8 @@ class MedianFilter(AudioFeature):
 
 class ErosionFilter(AudioFeature):
     '''
-        Erosion Filter.
-        '''
+    Erosion Filter.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('ErosionFilter',{}),]
     @classmethod
@@ -136,8 +134,8 @@ class ErosionFilter(AudioFeature):
 
 class DilationFilter(AudioFeature):
     '''
-        Dilation Filter.
-        '''
+    Dilation Filter.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('DilationFilter',{}),]
     @classmethod
@@ -149,8 +147,8 @@ class DilationFilter(AudioFeature):
 
 class WindowConvolution(AudioFeature):
     '''
-        Median Filter.
-        '''
+    Window Convolution Filter.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('WindowConvolution',{}),]
     @classmethod
@@ -162,8 +160,8 @@ class WindowConvolution(AudioFeature):
 
 class AccumulateSameValues(AudioFeature):
     '''
-        Accumulate same values.
-        '''
+    Accumulate same values.
+    '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('AccumulateSameValues',{}),]
     @classmethod
