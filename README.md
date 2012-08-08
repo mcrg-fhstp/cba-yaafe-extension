@@ -15,6 +15,9 @@ This extension provides the possibility to get the output directly to the comman
 > exec( $cmd, $output, $return_value);
 > </code>
 
+## New Features
+
+
 ## Installation
 
 Before installing this extension, you have to install [YAAFE](http://yaafe.sourceforge.net)!
@@ -28,6 +31,14 @@ Before installing this extension, you have to install [YAAFE](http://yaafe.sourc
 * <code>sudo chmod 755 /user/local/bin/yaafe_cba.py</code>
 
 ## Run
+
+either use the standard YAAFE-script to extract the new features:
+
+<code>yaafe.py -r 11025 --resample -f "cfa: ContinuousFrequencyActivation" wavefile.wav</code>
+
+or use the adapted one to get the output directly to the command line as JSON-encoded string:
+
+<code>yaafe_cba.py -r 11025 --resample -f "cfa: ContinuousFrequencyActivation" wavefile.wav</code>
 
 ## License
 
