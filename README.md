@@ -17,7 +17,7 @@ This extension provides the possibility to get the output directly to the comman
 
 ## New Features
 
-see [here](FEATURES.md)
+see [here](./FEATURES.md)
 
 ## Installation
 
