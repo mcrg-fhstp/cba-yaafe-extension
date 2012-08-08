@@ -49,6 +49,6 @@ The CBA-extension for YAAFE is released under GNU-LGPL v3.
 
 For questions, comments and complaints please use Issues on GitHub.
 
-Media Computing Research Group (<http://mc.fhstp.ac.at>)
-Institute for Creative Media Technologies (IC\M/T)
+Media Computing Research Group (<http://mc.fhstp.ac.at>)  
+Institute for Creative Media Technologies (IC\M/T)  
 University of Applied Sciences St. Pölten (<http://www.fhstp.ac.at>)
