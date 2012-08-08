@@ -3,7 +3,11 @@
 #
 # Yaafe extension for the Cultural Broadcasting Archive.
 #
+<<<<<<< HEAD
 # Copyright (c) 2012 University of Applied Sciences – Institute for Creative Media Technologies
+=======
+# Copyright (c) 2012 University of Applied Sciences - Institute for Creative Media Technologies
+>>>>>>> corrections for documentation
 #
 # Author : Ewald Wieser B.Sc. (fhstp.ac.at)
 #
@@ -195,7 +199,7 @@ def main():
                 print 'ERROR: invalid parameter syntax in "%s" (should be "key=value")'%pstr
                 return 1
             oparams[pstrdata[0]] = pstrdata[1]
-	### Adaptions for CBA
+### Adaptions for CBA
         # afp.setOutputFormat(options.format,options.out_dir,oparams) # don't set output format
         # process audio files
         for audiofile in audiofiles:
