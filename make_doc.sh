@@ -1,3 +1,4 @@
 #!/bin/sh
 
-sphinx-build -b html src_python/ doc/
+sphinx-build -b text src_python/ .
+mv FEATURES.txt FEATURES.md
