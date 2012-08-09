@@ -1,0 +1,298 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CBA - YAAFE feature extension &mdash; Python  documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python  documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">Python  documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-cba_yaafe_extension">
+<span id="cba-yaafe-feature-extension"></span><span id="audio-features"></span><h1>CBA - YAAFE feature extension<a class="headerlink" href="#module-cba_yaafe_extension" title="Permalink to this headline">¶</a></h1>
+<p>Yaafe extension module for the Cultural Broadcasting Archive.</p>
+<div class="section" id="available-features">
+<h2>Available features<a class="headerlink" href="#available-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="accumulatesamevalues">
+<h3>AccumulateSameValues<a class="headerlink" href="#accumulatesamevalues" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.AccumulateSameValues">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">AccumulateSameValues</tt><a class="headerlink" href="#cba_yaafe_extension.AccumulateSameValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accumulate same values.</p>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>AccumulateSameValues
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="continuousfrequencyactivation">
+<h3>ContinuousFrequencyActivation<a class="headerlink" href="#continuousfrequencyactivation" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.ContinuousFrequencyActivation">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">ContinuousFrequencyActivation</tt><a class="headerlink" href="#cba_yaafe_extension.ContinuousFrequencyActivation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute Continuous Frequency Activation (<a class="reference internal" href="#sp2007">[SP2007]</a>).</p>
+<table class="docutils citation" frame="void" id="sp2007" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[SP2007]</a></td><td>Seyerlehner, Pohle, et al., <em>Automatic Music Detection in Television Productions.</em>, Proc. of the 10th Int. Conference on Digital Audio Effects (DAFx-07), Bordeaux, France, September 10-15, 2007, pp. 221-228.</td></tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">BinThreshold</span></tt> (default=0.1): Values less than BinThreshold will be set to 0, others to 1.</li>
+<li><tt class="docutils literal"><span class="pre">FFTLength</span></tt> (default=0): Frame&#8217;s length on which perform FFT. Original frame is padded with zeros or truncated to reach this size. If 0 then use original frame length.</li>
+<li><tt class="docutils literal"><span class="pre">FFTWindow</span></tt> (default=Hanning): Weighting window to apply before fft. Hanning|Hamming|None</li>
+<li><tt class="docutils literal"><span class="pre">NbPeaks</span></tt> (default=5): Number of peaks to find</li>
+<li><tt class="docutils literal"><span class="pre">NbRunAvgFrames</span></tt> (default=21): Number of frames to integrate for running average</li>
+<li><tt class="docutils literal"><span class="pre">NbSumFrames</span></tt> (default=100): Number of frames to sum up</li>
+<li><tt class="docutils literal"><span class="pre">NormWindow</span></tt> (default=Hanning): Normalizing window to apply. Hanning|Hamming</li>
+<li><tt class="docutils literal"><span class="pre">StepNbSumFrames</span></tt> (default=50): Number of frames to skip between two sums</li>
+<li><tt class="docutils literal"><span class="pre">blockSize</span></tt> (default=1024): output frames size</li>
+<li><tt class="docutils literal"><span class="pre">stepSize</span></tt> (default=512): step between consecutive frames</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>ContinuousFrequencyActivation BinThreshold=0.1  FFTLength=0  FFTWindow=Hanning  NbPeaks=5  NbRunAvgFrames=21  NbSumFrames=100  NormWindow=Hanning  StepNbSumFrames=50  blockSize=1024  stepSize=512
+</pre></div>
+</div>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-class docutils literal"><span class="pre">MagnitudeSpectrum</span></tt></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="dilationfilter">
+<h3>DilationFilter<a class="headerlink" href="#dilationfilter" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.DilationFilter">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">DilationFilter</tt><a class="headerlink" href="#cba_yaafe_extension.DilationFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dilation Filter.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">DFSize</span></tt> (default=1): Size for Dilation Filter</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>DilationFilter DFSize=1
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="erosionfilter">
+<h3>ErosionFilter<a class="headerlink" href="#erosionfilter" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.ErosionFilter">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">ErosionFilter</tt><a class="headerlink" href="#cba_yaafe_extension.ErosionFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erosion Filter.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">EFSize</span></tt> (default=1): Size for Erosion Filter</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>ErosionFilter EFSize=1
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="medianfilter">
+<h3>MedianFilter<a class="headerlink" href="#medianfilter" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.MedianFilter">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">MedianFilter</tt><a class="headerlink" href="#cba_yaafe_extension.MedianFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Median Filter.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">MFOrder</span></tt> (default=5): Median filtering order, a number of frame (&#8216;7&#8217; or &#8216;9&#8217;) or a duration (&#8216;0.5s&#8217; or &#8216;0.125s&#8217;).</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>MedianFilter MFOrder=5
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="simplenoisegate">
+<h3>SimpleNoiseGate<a class="headerlink" href="#simplenoisegate" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.SimpleNoiseGate">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">SimpleNoiseGate</tt><a class="headerlink" href="#cba_yaafe_extension.SimpleNoiseGate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Noise Gate.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">SNGThreshold</span></tt> (default=0.001): Threshold for simple noise gate</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>SimpleNoiseGate SNGThreshold=0.001
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="windowconvolution">
+<h3>WindowConvolution<a class="headerlink" href="#windowconvolution" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.WindowConvolution">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">WindowConvolution</tt><a class="headerlink" href="#cba_yaafe_extension.WindowConvolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Window Convolution Filter.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">WCLength</span></tt> (default=0): Length of window to perform convolution with. Signal is padded with zeros or truncated to reach this size. If 0 then use original signal length.</li>
+<li><tt class="docutils literal"><span class="pre">WCWindow</span></tt> (default=Hanning): Form of window to apply with convolution. Hanning|Hamming|None</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>WindowConvolution WCLength=0  WCWindow=Hanning
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="available-feature-transforms">
+<h2>Available feature transforms<a class="headerlink" href="#available-feature-transforms" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simplethresholdclassification">
+<h3>SimpleThresholdClassification<a class="headerlink" href="#simplethresholdclassification" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="cba_yaafe_extension.SimpleThresholdClassification">
+<em class="property">class </em><tt class="descclassname">cba_yaafe_extension.</tt><tt class="descname">SimpleThresholdClassification</tt><a class="headerlink" href="#cba_yaafe_extension.SimpleThresholdClassification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Feature transform that compares each value to the threshold and outputs 1 if greater than or equal and 0 if lower than threshold.</p>
+<dl class="docutils">
+<dt><strong>Parameters</strong>:</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">STCThreshold</span></tt> (default=1.0): Threshold for Simple Threshold Classification</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Declaration example</strong>:</p>
+<div class="highlight-rest"><div class="highlight"><pre>SimpleThresholdClassification STCThreshold=1.0
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CBA - YAAFE feature extension</a><ul>
+<li><a class="reference internal" href="#available-features">Available features</a><ul>
+<li><a class="reference internal" href="#accumulatesamevalues">AccumulateSameValues</a></li>
+<li><a class="reference internal" href="#continuousfrequencyactivation">ContinuousFrequencyActivation</a></li>
+<li><a class="reference internal" href="#dilationfilter">DilationFilter</a></li>
+<li><a class="reference internal" href="#erosionfilter">ErosionFilter</a></li>
+<li><a class="reference internal" href="#medianfilter">MedianFilter</a></li>
+<li><a class="reference internal" href="#simplenoisegate">SimpleNoiseGate</a></li>
+<li><a class="reference internal" href="#windowconvolution">WindowConvolution</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#available-feature-transforms">Available feature transforms</a><ul>
+<li><a class="reference internal" href="#simplethresholdclassification">SimpleThresholdClassification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/FEATURES.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">Python  documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

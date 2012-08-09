@@ -17,6 +17,7 @@ import sys, os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.append(os.path.abspath('../../src_python'))
+sys.path.append(os.path.abspath('/usr/local/yaafe_extensions'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -25,7 +26,7 @@ sys.path.append(os.path.abspath('../../src_python'))
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo', 'sphinx.ext.pngmath', 'sphinx.ext.coverage','rst2pdf.pdfbuilder']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+#templates_path = ['_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -36,9 +37,33 @@ source_encoding = 'iso-8859-1'
 # The master toctree document.
 master_doc = 'FEATURES'
 
-
 def setup(app):
     from yaafelib.features_doc import generate_features_parameters
     app.connect('autodoc-process-docstring',generate_features_parameters)
 
 
+html_theme = "nature"
+'''
+html_theme_options = {'rightsidebar':True,
+    'stickysidebar':True,
+    #'footerbgcolor':'#778899',
+    #'footertextcolor':'#9400D3',
+    'sidebarbgcolor':'#6D6D6D',
+    #'sidebartextcolor':'#9400D3',
+    'sidebarlinkcolor':'#f2f2f2',
+    #'relbarbgcolor':'#708090',
+    #'relbartextcolor':'#9400D3',
+    #'relbarlinkcolor':'#FFA500',
+    'bgcolor':'#E7E7E7',
+    'textcolor':'#6D6D6D',
+    'linkcolor':'#D5000D',
+    #'visitedlinkcolor':'#FF8C00',
+    #'headbgcolor':'#E7E7E7',
+    'headtextcolor':'#303030',
+    #'headlinkcolor':'#778899',
+    #'codebgcolor':'#9400D3',
+    #'codetextcolor':'#9400D3',
+    'bodyfont':'"Helvetica Neue", Helvetica, Arial, serif',
+    'headfont':'"Helvetica Neue", Helvetica, Arial, serif'
+}
+'''

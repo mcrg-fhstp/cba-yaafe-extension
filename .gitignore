@@ -2,7 +2,6 @@ _old/
 _ignore/
 build/
 .DS_Store
-doc/
 CMakeCache.txt
 CMakeFiles/
 .doctrees/

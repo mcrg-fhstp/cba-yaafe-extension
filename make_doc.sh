@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sphinx-build -b text src_python/ .
+sphinx-build -b html src_python/ doc/
