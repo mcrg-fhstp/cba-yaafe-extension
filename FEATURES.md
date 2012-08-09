@@ -11,9 +11,9 @@ Available features
 
 AccumulateSameValues
 --------------------
-*
-class class cba_yaafe_extension.AccumulateSameValues
-*
+
+_class class cba_yaafe_extension.AccumulateSameValues_
+
    Counts the number of several consecutive same values and outputs as
    2-dimensional array [number, value].
 
