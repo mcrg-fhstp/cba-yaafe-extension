@@ -109,7 +109,7 @@ class SimpleNoiseGate(AudioFeature):
 
 class MedianFilter(AudioFeature):
     '''
-    Median Filter.
+    Median Filter. N values are taken and sorted ascending, value in the middle is taken as new one.
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('MedianFilter',{}),]
@@ -122,7 +122,7 @@ class MedianFilter(AudioFeature):
 
 class ErosionFilter(AudioFeature):
     '''
-    Erosion Filter.
+    Erosion Filter for classified values. 1-areas are shortened by n numbers on both sides, 0-areas extended.
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('ErosionFilter',{}),]
@@ -135,7 +135,7 @@ class ErosionFilter(AudioFeature):
 
 class DilationFilter(AudioFeature):
     '''
-    Dilation Filter.
+    Dilation Filter for classified values. 0-areas are shortened by n numbers on both sides, 1-areas extended.
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('DilationFilter',{}),]

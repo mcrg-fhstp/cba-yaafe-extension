@@ -80,7 +80,8 @@ DilationFilter
 
 class class cba_yaafe_extension.DilationFilter
 
-   Dilation Filter.
+   Dilation Filter for classified values. 0-areas are shortened by n
+   numbers on both sides, 1-areas extended.
 
    **Parameters**:
 
@@ -96,7 +97,8 @@ ErosionFilter
 
 class class cba_yaafe_extension.ErosionFilter
 
-   Erosion Filter.
+   Erosion Filter for classified values. 1-areas are shortened by n
+   numbers on both sides, 0-areas extended.
 
    **Parameters**:
 
@@ -112,7 +114,8 @@ MedianFilter
 
 class class cba_yaafe_extension.MedianFilter
 
-   Median Filter.
+   Median Filter. N values are taken and sorted ascending, value in
+   the middle is taken as new one.
 
    **Parameters**:
 
