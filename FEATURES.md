@@ -1,16 +1,21 @@
+<<<<<<< HEAD
 CBA - YAAFE feature extension
 *****************************
 
 Yaafe feature extension for music detection in the Cultural
 Broadcasting Archive.
+=======
+**Yaafe feature extension** for music detection in the **Cultural
+Broadcasting Archive** ([CBA](http://cba.fro.at)).
+>>>>>>> doc changes
 
 
 Available features
-==================
+******************
 
 
 AccumulateSameValues
---------------------
+====================
 
 _class class cba_yaafe_extension.AccumulateSameValues_
 
@@ -23,7 +28,7 @@ _class class cba_yaafe_extension.AccumulateSameValues_
 
 
 ContinuousFrequencyActivation
------------------------------
+=============================
 
 class class cba_yaafe_extension.ContinuousFrequencyActivation
 
@@ -75,7 +80,7 @@ class class cba_yaafe_extension.ContinuousFrequencyActivation
 
 
 DilationFilter
---------------
+==============
 
 class class cba_yaafe_extension.DilationFilter
 
@@ -91,7 +96,7 @@ class class cba_yaafe_extension.DilationFilter
 
 
 ErosionFilter
--------------
+=============
 
 class class cba_yaafe_extension.ErosionFilter
 
@@ -107,7 +112,7 @@ class class cba_yaafe_extension.ErosionFilter
 
 
 MedianFilter
-------------
+============
 
 class class cba_yaafe_extension.MedianFilter
 
@@ -124,7 +129,7 @@ class class cba_yaafe_extension.MedianFilter
 
 
 SimpleNoiseGate
----------------
+===============
 
 class class cba_yaafe_extension.SimpleNoiseGate
 
@@ -141,11 +146,12 @@ class class cba_yaafe_extension.SimpleNoiseGate
 
 
 WindowConvolution
------------------
+=================
 
 class class cba_yaafe_extension.WindowConvolution
 
-   Window Convolution Filter.
+   Convolution Filter accomplished in the spectrum of the signal with
+   a specific window form.
 
    **Parameters**:
 
@@ -162,11 +168,11 @@ class class cba_yaafe_extension.WindowConvolution
 
 
 Available feature transforms
-============================
+****************************
 
 
 SimpleThresholdClassification
------------------------------
+=============================
 
 class class cba_yaafe_extension.SimpleThresholdClassification
 

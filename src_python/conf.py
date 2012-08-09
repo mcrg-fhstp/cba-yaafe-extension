@@ -38,6 +38,7 @@ source_encoding = 'iso-8859-1'
 # The master toctree document.
 master_doc = 'FEATURES'
 
+
 def setup(app):
     from yaafelib.features_doc import generate_features_parameters
     app.connect('autodoc-process-docstring',generate_features_parameters)

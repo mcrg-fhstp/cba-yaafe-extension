@@ -30,7 +30,7 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
-Yaafe feature extension for music detection in the Cultural Broadcasting Archive.
+**Yaafe feature extension** for music detection in the **Cultural Broadcasting Archive** ([CBA](http://cba.fro.at)).
 '''
 from yaafelib.audiofeature import AudioFeature, check_dataflow_params, dataflow_safe_append
 from yaafelib.dataflow import DataFlow
