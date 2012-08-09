@@ -17,7 +17,7 @@ This extension provides the possibility to get the output directly to the comman
 
 ## New Features
 
-For a list of the new features and a description see: *<base>FEATURES.md*.
+For a list of the new features and a description see: *[FEATURES.md](https://github.com/mcrg-fhstp/cba-yaafe-extension/blob/master/FEATURES.md)*.
 
 ## Installation
 
