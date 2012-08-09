@@ -51,7 +51,7 @@ set(CMAKE_INSTALL_YAAFE_EXTENSIONS yaafe_extensions CACHE PATH "Output directory
 add_definitions(-DVERSION=${YAAFE_VERSION})
 add_subdirectory (src_cpp)
 add_subdirectory (src_python)
-add_subdirectory (doc)
+#add_subdirectory (doc)
 
 # export targets
 #install(EXPORT yaafe-targets DESTINATION lib/yaafe)

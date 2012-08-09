@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sphinx-build -b text src_python/ .
+sphinx-build -b text -a src_python/ .
 mv FEATURES.txt FEATURES.md

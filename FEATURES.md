@@ -2,7 +2,8 @@
 CBA - YAAFE feature extension
 *****************************
 
-Yaafe extension module for the Cultural Broadcasting Archive.
+Yaafe feature extension for music detection in the Cultural
+Broadcasting Archive.
 
 
 Available features
@@ -14,7 +15,8 @@ AccumulateSameValues
 
 class class cba_yaafe_extension.AccumulateSameValues
 
-   Accumulate same values.
+   Counts the number of several consecutive same values and outputs as
+   2-dimensional array [number, value].
 
    **Declaration example**:
 
@@ -26,7 +28,9 @@ ContinuousFrequencyActivation
 
 class class cba_yaafe_extension.ContinuousFrequencyActivation
 
-   Compute Continuous Frequency Activation ([SP2007]).
+   Compute Continuous Frequency Activation ([SP2007]).   Continuously
+   (over several seconds) activated frequency bands are detected and
+   their spectral peak values summed up to the CFA-value.
 
    [SP2007] Seyerlehner, Pohle, et al., *Automatic Music Detection in
             Television Productions.*, Proc. of the 10th Int.
@@ -78,9 +82,13 @@ class class cba_yaafe_extension.DilationFilter
 
    Dilation Filter.
 
+   **Parameters**:
+
+      * "DFSize" (default=1): Size for Dilation Filter
+
    **Declaration example**:
 
-      DilationFilter
+      DilationFilter DFSize=1
 
 
 ErosionFilter
@@ -90,9 +98,13 @@ class class cba_yaafe_extension.ErosionFilter
 
    Erosion Filter.
 
+   **Parameters**:
+
+      * "EFSize" (default=1): Size for Erosion Filter
+
    **Declaration example**:
 
-      ErosionFilter
+      ErosionFilter EFSize=1
 
 
 MedianFilter
@@ -117,7 +129,7 @@ SimpleNoiseGate
 
 class class cba_yaafe_extension.SimpleNoiseGate
 
-   Simple Noise Gate.
+   Signal values lower than the threshold are set to 0.
 
    **Parameters**:
 

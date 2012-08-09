@@ -30,7 +30,7 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
-Yaafe extension module for the Cultural Broadcasting Archive.
+Yaafe feature extension for music detection in the Cultural Broadcasting Archive.
 '''
 from yaafelib.audiofeature import AudioFeature, check_dataflow_params, dataflow_safe_append
 from yaafelib.dataflow import DataFlow
@@ -43,7 +43,8 @@ import decimal
 
 class ContinuousFrequencyActivation(AudioFeature):
     '''
-    Compute Continuous Frequency Activation ([SP2007]_).
+    Compute Continuous Frequency Activation ([SP2007]_).  
+    Continuously (over several seconds) activated frequency bands are detected and their spectral peak values summed up to the CFA-value.
         
     .. [SP2007] Seyerlehner, Pohle, et al., *Automatic Music Detection in Television Productions.*, Proc. of the 10th Int. Conference on Digital Audio Effects (DAFx-07), Bordeaux, France, September 10-15, 2007, pp. 221-228.
     '''
@@ -95,7 +96,7 @@ class SimpleThresholdClassification(AudioFeature):
 
 class SimpleNoiseGate(AudioFeature):
     '''
-    Simple Noise Gate.
+    Signal values lower than the threshold are set to 0. 
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('SimpleNoiseGate',{}),]
@@ -147,7 +148,7 @@ class DilationFilter(AudioFeature):
 
 class WindowConvolution(AudioFeature):
     '''
-    Window Convolution Filter.
+    Convolution Filter accomplished in the spectrum of the signal with a specific window form.
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('WindowConvolution',{}),]
@@ -160,7 +161,7 @@ class WindowConvolution(AudioFeature):
 
 class AccumulateSameValues(AudioFeature):
     '''
-    Accumulate same values.
+    Counts the number of several consecutive same values and outputs as 2-dimensional array [number, value].
     '''
     COMPONENT_LIBS = ['cba-yaafe-extension']
     PARAMS = [('AccumulateSameValues',{}),]
