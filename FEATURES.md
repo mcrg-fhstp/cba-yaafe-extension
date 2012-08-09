@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-CBA - YAAFE feature extension
-*****************************
-
-Yaafe feature extension for music detection in the Cultural
-Broadcasting Archive.
-=======
 **Yaafe feature extension** for music detection in the **Cultural
 Broadcasting Archive** ([CBA](http://cba.fro.at)).
->>>>>>> doc changes
 
 
 Available features
@@ -17,7 +9,7 @@ Available features
 AccumulateSameValues
 ====================
 
-_class class cba_yaafe_extension.AccumulateSameValues_
+class class cba_yaafe_extension.AccumulateSameValues
 
    Counts the number of several consecutive same values and outputs as
    2-dimensional array [number, value].
