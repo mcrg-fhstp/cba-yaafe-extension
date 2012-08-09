@@ -29,7 +29,6 @@ Before installing this extension, you have to install [YAAFE](http://yaafe.sourc
 * <code>ccmake ..</code> type 'c' for configure and 'g' for generate
 * <code>make</code>
 * <code>sudo make install</code>
-* <code>sudo chmod 755 /user/local/bin/yaafe_cba.py</code>
 
 ## Run
 
