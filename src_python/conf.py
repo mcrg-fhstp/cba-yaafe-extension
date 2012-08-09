@@ -18,6 +18,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.append(os.path.abspath('../../src_python'))
 sys.path.append(os.path.abspath('/usr/local/yaafe_extensions'))
+sys.path.append(os.path.abspath('/usr/local/python_packages'))
 
 # -- General configuration -----------------------------------------------------
 

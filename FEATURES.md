@@ -34,6 +34,7 @@ class class cba_yaafe_extension.ContinuousFrequencyActivation
             France, September 10-15, 2007, pp. 221-228.
 
    **Parameters**:
+
       * "BinThreshold" (default=0.1): Values less than BinThreshold
         will be set to 0, others to 1.
 
@@ -77,12 +78,9 @@ class class cba_yaafe_extension.DilationFilter
 
    Dilation Filter.
 
-   **Parameters**:
-      * "DFSize" (default=1): Size for Dilation Filter
-
    **Declaration example**:
 
-      DilationFilter DFSize=1
+      DilationFilter
 
 
 ErosionFilter
@@ -92,12 +90,9 @@ class class cba_yaafe_extension.ErosionFilter
 
    Erosion Filter.
 
-   **Parameters**:
-      * "EFSize" (default=1): Size for Erosion Filter
-
    **Declaration example**:
 
-      ErosionFilter EFSize=1
+      ErosionFilter
 
 
 MedianFilter
@@ -108,6 +103,7 @@ class class cba_yaafe_extension.MedianFilter
    Median Filter.
 
    **Parameters**:
+
       * "MFOrder" (default=5): Median filtering order, a number of
         frame ('7' or '9') or a duration ('0.5s' or '0.125s').
 
@@ -124,6 +120,7 @@ class class cba_yaafe_extension.SimpleNoiseGate
    Simple Noise Gate.
 
    **Parameters**:
+
       * "SNGThreshold" (default=0.001): Threshold for simple noise
         gate
 
@@ -140,6 +137,7 @@ class class cba_yaafe_extension.WindowConvolution
    Window Convolution Filter.
 
    **Parameters**:
+
       * "WCLength" (default=0): Length of window to perform
         convolution with. Signal is padded with zeros or truncated to
         reach this size. If 0 then use original signal length.
@@ -165,6 +163,7 @@ class class cba_yaafe_extension.SimpleThresholdClassification
    outputs 1 if greater than or equal and 0 if lower than threshold.
 
    **Parameters**:
+
       * "STCThreshold" (default=1.0): Threshold for Simple Threshold
         Classification
 
