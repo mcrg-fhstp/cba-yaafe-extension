@@ -1,13 +1,17 @@
+
+CBA - Feature extension
+***********************
+
 **Yaafe feature extension** for music detection in the **Cultural
 Broadcasting Archive** ([CBA](http://cba.fro.at)).
 
 
 Available features
-******************
+==================
 
 
 AccumulateSameValues
-====================
+--------------------
 
 class class cba_yaafe_extension.AccumulateSameValues
 
@@ -20,7 +24,7 @@ class class cba_yaafe_extension.AccumulateSameValues
 
 
 ContinuousFrequencyActivation
-=============================
+-----------------------------
 
 class class cba_yaafe_extension.ContinuousFrequencyActivation
 
@@ -72,7 +76,7 @@ class class cba_yaafe_extension.ContinuousFrequencyActivation
 
 
 DilationFilter
-==============
+--------------
 
 class class cba_yaafe_extension.DilationFilter
 
@@ -88,7 +92,7 @@ class class cba_yaafe_extension.DilationFilter
 
 
 ErosionFilter
-=============
+-------------
 
 class class cba_yaafe_extension.ErosionFilter
 
@@ -104,7 +108,7 @@ class class cba_yaafe_extension.ErosionFilter
 
 
 MedianFilter
-============
+------------
 
 class class cba_yaafe_extension.MedianFilter
 
@@ -121,7 +125,7 @@ class class cba_yaafe_extension.MedianFilter
 
 
 SimpleNoiseGate
-===============
+---------------
 
 class class cba_yaafe_extension.SimpleNoiseGate
 
@@ -138,7 +142,7 @@ class class cba_yaafe_extension.SimpleNoiseGate
 
 
 WindowConvolution
-=================
+-----------------
 
 class class cba_yaafe_extension.WindowConvolution
 
@@ -160,11 +164,11 @@ class class cba_yaafe_extension.WindowConvolution
 
 
 Available feature transforms
-****************************
+============================
 
 
 SimpleThresholdClassification
-=============================
+-----------------------------
 
 class class cba_yaafe_extension.SimpleThresholdClassification
 
